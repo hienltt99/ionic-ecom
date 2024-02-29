@@ -28,7 +28,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { useEffect, useState } from 'react';
 
 // Router
-import AppRouter from '@router/AppRouter';
+import AppRouter from '@routers';
 
 // Providers
 import { AuthProvider } from '@providers/AuthProvider';
@@ -37,7 +37,7 @@ import { AuthProvider } from '@providers/AuthProvider';
 import SplashScreen from '@pages/splash';
 
 // Utils
-import { TIME_SPLASH } from '@utils/constants/app.constant';
+import { TIME_SPLASH } from '@constants/app.constant';
 
 setupIonicReact();
 
