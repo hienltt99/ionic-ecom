@@ -1,6 +1,9 @@
 import './style.scss';
 import { ICONS } from '@assets';
-import { useState } from 'react';
+import { BaseSyntheticEvent, useContext, useState } from 'react';
+import { AuthContext } from '@providers/AuthProvider';
+import { useHistory } from 'react-router-dom';
+import { ROUTES } from '@constants/app.constant';
 
 const inputs = [
   {
@@ -18,9 +21,17 @@ const inputs = [
 ]
 
 const SignInForm = () => {
+  const { login } = useContext(AuthContext);
+  const history = useHistory();
   const [inputFocus, setInputFocus] = useState('');
 
-  const handleFocus = (event) => {
+  const handleSignIn = () => {
+    login().then(() => {
+      history.push(ROUTES.APP);
+    })
+  }
+
+  const handleFocus = (event: BaseSyntheticEvent) => {
     setInputFocus(event.target.name);
   }
 
@@ -28,7 +39,7 @@ const SignInForm = () => {
     setInputFocus('');
   }
 
-  const checkInputFocus = (inputName) => {
+  const checkInputFocus = (inputName: string) => {
     if (inputFocus === inputName) return 'focus';
     return '';
   }
@@ -50,7 +61,7 @@ const SignInForm = () => {
       ))}
 
       <div className="input-group flex-nowrap">
-        <button className={'btn btn-signin'}>Sign In</button>
+        <button className={'btn btn-signin'} onClick={handleSignIn}>Sign In</button>
       </div>
     </div>
   )

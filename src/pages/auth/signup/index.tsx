@@ -3,7 +3,7 @@ import './RegisterPage.scss';
 
 import IntroContainer from '@components/shared/IntroContainer';
 import SignUpForm from '@components/PageSignUp/SignUpForm';
-import { ROUTES } from '@router/AppRouter';
+import { ROUTES } from '@constants/app.constant';
 
 const SignUpPage = () => {
   const history = useHistory();

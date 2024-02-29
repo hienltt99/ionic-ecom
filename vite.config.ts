@@ -18,10 +18,10 @@ export default defineConfig({
       '@constants': path.resolve(__dirname, 'src/constants/'),
       '@pages': path.resolve(__dirname, 'src/pages/'),
       '@providers': path.resolve(__dirname, 'src/providers/'),
+      '@routers': path.resolve(__dirname, 'src/routers/'),
       '@services': path.resolve(__dirname, 'src/services/'),
       '@theme': path.resolve(__dirname, 'src/theme/'),
-      '@router': path.resolve(__dirname, 'src/router/'),
-      '@types': path.resolve(__dirname, 'src/types/'),
+      '@types': path.resolve(__dirname, 'src/assets/types/'),
       '@utils': path.resolve(__dirname, 'src/utils/'),
     }
   },

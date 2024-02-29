@@ -3,7 +3,7 @@ import './LoginPage.scss';
 
 import IntroContainer from '@components/shared/IntroContainer';
 import SignInForm from '@components/PageSignIn/SignInForm';
-import { ROUTES } from '@router/AppRouter';
+import { ROUTES } from '@constants/app.constant';
 
 const SignInPage = () => {
   const history = useHistory();
