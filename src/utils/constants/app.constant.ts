@@ -1,0 +1,1 @@
+export const TIME_SPLASH = 3000; //ms

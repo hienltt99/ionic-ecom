@@ -1,0 +1,43 @@
+
+.login-form {
+  .input-group-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0%, -50%);
+    &.focus {
+      filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+    }
+  }
+  input {
+    border-color: #EBF0FF;
+    height: 46px;
+    padding-left: 40px;
+    color: #9098B1 !important;
+    font-size: 14px;
+    font-weight: bold;
+    &:focus {
+      box-shadow: none;
+    }
+    &::placeholder {
+      color: #9098B1 !important;
+      font-weight: normal;
+    }
+  }
+  .input-group-text {
+    background: none;
+    border-color: #EBF0FF;
+  }
+  .btn-signin {
+    background: #40BFFF;
+    width: 100%;
+    height: 46px;
+    color: white;
+    font-weight: bold;
+    &:active {
+      background: #319ed5;
+      border-color: unset !important;
+      color: white;
+    }
+  }
+}
